@@ -1,1 +1,1 @@
-GNU Public License v2+
+See LICENCE file
