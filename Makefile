@@ -7,7 +7,7 @@ MYSQL_PORT=3306
 
 start:
 	docker run -p $(SSH_PORT):22 -p $(MYSQL_PORT):3306 --name="$(CONTAINER_NAME)" \
-	-v $(PATH_IN_HOST):/var/lib/mysql
+	-v $(PATH_IN_HOST):/var/lib/mysql \
 	-e AUTHORIZED_KEYS="$(PUBKEYS)" \
 	-d $(CONTAINER_NAME)
 
