@@ -1,5 +1,5 @@
 CONTAINER_NAME=centos5-mysql50
-PUBKEYS=$(shell cat ~/.ssh/authorized_keys) 
+PUBKEYS=$(shell cat ~/.ssh/authorized_keys|sed 's/$$/,/'|xargs echo) 
 # Adapt to your needs
 PATH_IN_HOST=/data/Mysql/mysql-rec/
 SSH_PORT=2222
